@@ -57,3 +57,8 @@ def home():
         "username": claims.get("username"),
         "email": claims.get("email")
     }), 200
+
+
+@login_bp.route('/health', methods=['GET'])
+def health_check():
+    return "OK", 200
